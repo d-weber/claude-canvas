@@ -1,0 +1,6 @@
+dist/
+node_modules/
+*.vsix
+.claude-plugin/types/
+__pycache__/
+plugin/tsconfig.json

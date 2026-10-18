@@ -1,0 +1,16 @@
+{
+  "name": "canvas",
+  "version": "0.1.0",
+  "description": "Push rendered Markdown, LaTeX math, Mermaid diagrams, charts, images and HTML pages to the Claude Canvas panel in VS Code (canvas_push tool, /canvas command, answers mirrored while the panel is open).",
+  "author": {
+    "name": "Damien Weber"
+  },
+  "userConfig": {
+    "mirrorAnswers": {
+      "type": "boolean",
+      "title": "Mirror every answer",
+      "description": "Also copy every final answer to the canvas while the panel is open. Off: the model pushes only what is better rendered (math, figures, diagrams, images, long tables).",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "name": "claude-canvas",
+  "displayName": "Claude Canvas",
+  "description": "A rendered canvas beside your terminal that Claude Code pushes Markdown, LaTeX math, Mermaid diagrams, charts, images and HTML pages into.",
+  "version": "0.1.0",
+  "publisher": "damien-weber",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d-weber/claude-canvas"
+  },
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "canvas",
+    "katex",
+    "mermaid"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "claudeCanvas.open",
+        "title": "Open",
+        "category": "Claude Canvas"
+      },
+      {
+        "command": "claudeCanvas.clear",
+        "title": "Clear (move cards to history)",
+        "category": "Claude Canvas"
+      },
+      {
+        "command": "claudeCanvas.openFolder",
+        "title": "Reveal the canvas folder",
+        "category": "Claude Canvas"
+      },
+      {
+        "command": "claudeCanvas.setupClaudePlugin",
+        "title": "Register the Claude Code plugin (canvas_push tool)",
+        "category": "Claude Canvas"
+      }
+    ],
+    "configuration": {
+      "title": "Claude Canvas",
+      "properties": {
+        "claudeCanvas.directory": {
+          "type": "string",
+          "default": "~/.claude/canvas",
+          "description": "The drop folder the canvas watches. Agents push cards by writing files into its feed/ subfolder; the Claude Code plugin reads the same path (override it there with CLAUDE_CANVAS_DIR)."
+        },
+        "claudeCanvas.autoOpen": {
+          "type": "boolean",
+          "default": true,
+          "description": "Open the canvas panel when a card arrives while it is closed."
+        },
+        "claudeCanvas.maxCards": {
+          "type": "number",
+          "default": 200,
+          "minimum": 10,
+          "description": "Cards kept on the canvas; older ones move to history/."
+        },
+        "claudeCanvas.defaultFrameHeight": {
+          "type": "number",
+          "default": 480,
+          "minimum": 80,
+          "description": "Height in pixels of an HTML card's frame when the push gives none."
+        }
+      }
+    }
+  },
+  "homepage": "https://github.com/d-weber/claude-canvas"
+}

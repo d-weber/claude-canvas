@@ -1,0 +1,17 @@
+{
+  "name": "claude-canvas",
+  "description": "Damien's Claude Code setup: the Claude Canvas panel plugin and the Frame transcript border",
+  "owner": { "name": "Damien Weber" },
+  "plugins": [
+    {
+      "name": "canvas",
+      "description": "canvas_push tool, /canvas command and the system-prompt policy for the Claude Canvas VS Code panel",
+      "source": "./plugin"
+    },
+    {
+      "name": "frame",
+      "description": "A colored frame around your prompts and Claude's answers in the terminal transcript",
+      "source": { "source": "github", "repo": "d-weber/claude-frame" }
+    }
+  ]
+}
